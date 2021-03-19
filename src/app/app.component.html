@@ -3,6 +3,9 @@
     <input type="text" (input)="onCountryChange($event.currentTarget, f)">
 
     <input type="text" [placeholder]="phonePlaceholder" required name="phone" [(ngModel)]="phone" #userPhone="ngModel">
+
+    <input type="text" [placeholder]="postalPlaceholder" required name="postalCode" [(ngModel)]="postalCode" #userPostalCode="ngModel">
+
   </div>
 
   <div>
@@ -13,6 +16,11 @@
   <div>
     <span *ngIf="!userPhone.valid">
       Telphone code is invalid
+    </span>
+  </div>
+  <div>
+    <span *ngIf="!userPostalCode.valid">
+      Postal code is invalid
     </span>
   </div>
 
